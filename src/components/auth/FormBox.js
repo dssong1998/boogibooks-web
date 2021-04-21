@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { BaseBox } from "../common";
+import { BaseBox } from "../commonStyles";
 
 const SFormBox = styled(BaseBox)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 80px 40px 25px 40px;
+  padding: 35px 40px 25px 40px;
   margin-bottom: 10px;
   form {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;

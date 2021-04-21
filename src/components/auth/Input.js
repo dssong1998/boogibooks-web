@@ -1,16 +1,30 @@
 import styled from "styled-components";
 
-const SInput = styled.input`
+const Input = styled.input`
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-top: 10px;
   width: 100%;
   padding: 7px;
   background-color: #ffffff;
-  border-bottom: 1px solid ${(props) => props.theme.borderColor};
+  border-bottom: 1px solid
+    ${(props) => {
+      if (props.valid) {
+        return props.theme.error;
+      } else {
+        return props.theme.borderColor;
+      }
+    }};
+  text-transform: ${({ type }) => {
+    if (type === "username") return "lowercase";
+    else return "none";
+  }};
+  &::placeholder {
+    font-size: 12px;
+  }
+  &:focus {
+    border-color: ${(props) => props.theme.accent};
+    border-width: 2px;
+  }
 `;
-
-const Input = (props) => {
-  return <SInput {...props} />;
-};
 
 export default Input;

@@ -8,7 +8,7 @@ const StyledSeperator = styled.div`
   justify-content: center;
   align-items: center;
   div {
-    width: 100%;
+    width: 35%;
     height: 1px;
     background-color: ${(props) => props.theme.lightGray};
   }

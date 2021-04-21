@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Button = styled.input`
+const SubmitButton = styled.input`
   border: none;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   background-color: ${(props) => props.theme.accent};
   color: white;
@@ -12,11 +12,9 @@ const Button = styled.input`
   box-sizing: border-box;
   margin-bottom: 10px;
   width: 100%;
+  opacity: ${(props) => (props.disabled ? 0.6 : 1)};
   &:hover {
-    cursor: pointer;
+    cursor: ${(props) => (props.disabled ? "default" : "pointer")};
   }
 `;
-const SubmitButton = (props) => {
-  return <Button {...props} />;
-};
 export default SubmitButton;

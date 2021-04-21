@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const SLinkButton = styled(Link)`
+const LinkButton = styled(Link)`
   text-align: center;
   width: 100%;
   background-color: ${(props) => props.theme.lightGray};
@@ -10,7 +10,4 @@ const SLinkButton = styled(Link)`
   border-radius: 5px;
   padding: 5px;
 `;
-const LinkButton = (props) => {
-  return <SLinkButton {...props} />;
-};
 export default LinkButton;
